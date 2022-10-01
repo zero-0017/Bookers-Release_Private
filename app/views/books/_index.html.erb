@@ -8,6 +8,8 @@
     </tr>
   </thead>
   <tbody>
+    <% if t.status =="1" %>
+    <% elsif t.status =="2"&&t.user.id==current_user.id %>
     <% books.each do |book| %>
       <tr>
         <td><%= link_to(book.user) do %>
@@ -20,5 +22,6 @@
         <td>コメント数：<%= book.book_comments.count %></td>
       </tr>
     <% end %>
+  <% end %>
   </tbody>
 </table>

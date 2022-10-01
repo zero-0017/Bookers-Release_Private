@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_09_29_001318) do
     t.string "title"
     t.text "body"
     t.integer "user_id"
+    t.boolean "status", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
